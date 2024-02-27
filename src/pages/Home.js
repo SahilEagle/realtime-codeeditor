@@ -10,7 +10,7 @@ const Home = () => {
     const [username, setUsername] = useState('');
     const createNewRoom = (e) => {
         e.preventDefault();
-        const id = uuidV4();
+        const id = uuidV4().slice(0, 8);
         setRoomId(id);
         toast.success('Created a new room');
     };
@@ -37,11 +37,7 @@ const Home = () => {
     return (
         <div className="homePageWrapper">
             <div className="formWrapper">
-                <img
-                    className="homePageLogo"
-                    src="/code-sync.png"
-                    alt="code-sync-logo"
-                />
+                <h1 className="homePageLogo">Welcome To Codeincide</h1>
                 <h4 className="mainLabel">Paste invitation ROOM ID</h4>
                 <div className="inputGroup">
                     <input
@@ -77,8 +73,7 @@ const Home = () => {
             </div>
             <footer>
                 <h4>
-                    Built with 💛 &nbsp; by &nbsp;
-                    <a href="https://github.com/codersgyan">Coder's Gyan</a>
+                    Built with 💛 &nbsp; by &nbsp; &#123; Sahil Satvik Jeet &#125;
                 </h4>
             </footer>
         </div>
